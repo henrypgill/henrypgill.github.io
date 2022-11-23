@@ -1,0 +1,84 @@
+:root {
+    --color1: #264653;
+    --color2: #BF6900;
+    --color3: #4C956C;
+    --color4: #3D0C11;
+    --color5: #FEFDFF;
+}
+
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    background-color: var(--color1);
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.logoNavDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logoDiv {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    border: 5px solid black;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.logoDiv img {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding-right: 100px;
+}
+
+nav ul li {
+    margin: 10px 30px;
+}
+.navAnchor {
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.navAnchor:hover {
+    color: var(--color4);
+    background-color: #BF6900;
+    padding: 5px;
+}
+
+main {
+
+}
+
+.cardContainer {
+    display: flex;
+}
+
+.card {
+    border: 1px solid black;
+    height: 600px;
+    width: 400px;
+    margin: 50px;
+    color: white;
+    padding: 20px;
+}
