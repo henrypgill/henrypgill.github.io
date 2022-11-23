@@ -67,18 +67,184 @@ nav ul li {
 }
 
 main {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bigBubbleContainer {
+    width: 80%;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(7, 1fr);
 }
 
-.cardContainer {
+
+.bubbleCardContainer {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bubble {
+    height: 100px;
+    width:100px;
+    border-radius: 50px;
+    position: absolute;
+
 }
 
 .card {
-    border: 1px solid black;
-    height: 600px;
-    width: 400px;
-    margin: 50px;
-    color: white;
-    padding: 20px;
+    height: 100%;
+    aspect-ratio: 1 / 1.62;
+}
+
+
+.card1area {
+    grid-area: 1 / 1 / span 5 / span 3;
+}
+.card2area {
+    grid-area: 1 / 3 / span 5 / span 3;
+}
+.card3area {
+    grid-area: 1 / 5 / span 5 / span 3;
+}
+.card4area { 
+    grid-area: 1 / 7 / span 5 / span 3;
+}
+.card5area {
+    grid-area: 3 / 1 / span 5 / span 3;
+}
+.card6area {
+    grid-area: 3 / 3 / span 5 / span 3;
+}
+.card7area {
+    grid-area: 3 / 5 / span 5 / span 3;
+}
+.card8area {
+    grid-area: 3 / 7 / span 5 / span 3;
+}
+
+
+
+
+.card1 {
+    background-color: #60A17C;
+    display: none;
+}
+.card2 {
+    background-color: #74AD8D;
+    display: none;
+}
+.card3 {
+    background-color: #88B89D;
+    display: none;
+}
+.card4 {
+    background-color: #9CC4AD;
+    display: none;
+}
+.card5 {
+    background-color: #AFD0BE;
+    display: none;
+}
+.card6 {
+    background-color: #C3DCCE;
+    display: none;
+}
+.card7 {
+    background-color: #D7E7DE;
+    display: none;
+}
+.card8 {
+    background-color: #EBF3EF;
+    display: none;
+}
+
+
+.bubble1 {
+    background-color: #F8EEE3;
+}
+.bubble2 {
+    background-color: #F1DEC6;
+}
+.bubble3 {
+    background-color: #EACDAA;
+}
+.bubble4 {
+    background-color: #E3BC8E;
+}
+.bubble5 {
+    background-color: #DBAC71;
+}
+.bubble6 {
+    background-color: #D49B55;
+}
+.bubble7 {
+    background-color: #CD8A39;
+}
+.bubble8 {
+    background-color: #C67A1C;
+}
+
+
+
+
+.bubble1:hover {
+    background-color: #C67A1C;
+    cursor: pointer;
+}
+.bubble2:hover {
+    background-color: #CD8A39;
+    cursor: pointer;
+}
+.bubble3:hover {
+    background-color: #D49B55;
+    cursor: pointer;
+}
+.bubble4:hover {
+    background-color: #DBAC71;
+    cursor: pointer;
+}
+.bubble5:hover {
+    background-color: #E3BC8E;
+    cursor: pointer;
+}
+.bubble6:hover {
+    background-color: #EACDAA;
+    cursor: pointer;
+}
+.bubble7:hover {
+    background-color: #F1DEC6;
+    cursor: pointer;
+}
+.bubble8:hover {
+    background-color: #F8EEE3;
+    cursor: pointer;
+}
+
+
+.bubble1:active {
+    display: none;
+}
+.bubble2:active {
+    display: none;
+}
+.bubble3:active {
+    display: none;
+}
+.bubble4:active {
+    display: none;
+}
+.bubble5:active {
+    display: none;
+}
+.bubble6:active {
+    display: none;
+}
+.bubble7:active {
+    display: none;
+}
+.bubble8:active {
+    display: none;
 }
