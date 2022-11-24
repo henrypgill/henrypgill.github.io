@@ -10,8 +10,6 @@ html {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     background-color: var(--color1);
-    border: 1px solid black;
-    box-sizing: border-box;
 }
 
 .logoNavDiv {
@@ -90,7 +88,25 @@ main {
     height: 100px;
     width:100px;
     border-radius: 50px;
+    transition: height 0.5s, width 0.5s, border-radius 0.5s, background-color 0.5s;
+    transition-delay: 0.1s;
+    border: none;
+    box-sizing: border-box;
+    padding: 0px;
     position: absolute;
+}
+
+.bubble:hover {
+    height: 200px;
+    width:200px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: height 0.5s, width 0.5s, border-radius 0.5s, background-color 0.5s;
+}
+
+.bubble:active {
+    aspect-ratio: 1.62 / 1;
+    z-index: 10000;
 
 }
 
@@ -130,7 +146,7 @@ main {
 
 .card1 {
     background-color: #60A17C;
-    display: none;
+    /*display: none;*/
 }
 .card2 {
     background-color: #74AD8D;
@@ -190,40 +206,33 @@ main {
 
 
 
+
 .bubble1:hover {
     background-color: #C67A1C;
-    cursor: pointer;
 }
 .bubble2:hover {
     background-color: #CD8A39;
-    cursor: pointer;
 }
 .bubble3:hover {
     background-color: #D49B55;
-    cursor: pointer;
 }
 .bubble4:hover {
     background-color: #DBAC71;
-    cursor: pointer;
 }
 .bubble5:hover {
     background-color: #E3BC8E;
-    cursor: pointer;
 }
 .bubble6:hover {
     background-color: #EACDAA;
-    cursor: pointer;
 }
 .bubble7:hover {
     background-color: #F1DEC6;
-    cursor: pointer;
 }
 .bubble8:hover {
     background-color: #F8EEE3;
-    cursor: pointer;
 }
 
-
+/*
 .bubble1:active {
     display: none;
 }
@@ -248,3 +257,4 @@ main {
 .bubble8:active {
     display: none;
 }
+*/
