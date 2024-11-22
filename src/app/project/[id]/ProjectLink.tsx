@@ -1,24 +1,23 @@
 "use client";
 
+import { ProjectLink } from "@/types/projectTypes";
 import Image from "next/image";
 
 export interface ProjectLinkProps {
-    type: "web" | "figma" | "github";
-    link: string;
-    text?: string;
+    link: ProjectLink;
 }
 
-export function ProjectLink(props: ProjectLinkProps): JSX.Element {
-    const { type, link, text } = props;
+export function ProjectLinkButton(props: ProjectLinkProps): JSX.Element {
+    const { type, link, text } = props.link;
 
     const iconSrc = () => {
         switch (type) {
             case "web":
-                return "/reactIcon.svg";
+                return "/weblink.svg";
             case "figma":
-                return "/reactIcon.svg";
+                return "/figmaIcon.png";
             case "github":
-                return "/reactIcon.svg";
+                return "/githubIcon.png";
         }
     };
 
@@ -42,7 +41,7 @@ export function ProjectLink(props: ProjectLinkProps): JSX.Element {
     return (
         <button
             onClick={() => window.open(link, "_blank")}
-            className="flex flex-row gap-12"
+            className="flex flex-row gap-12 bg-white rounded-xl p-12 pt-4 pb-4"
         >
             <Image src={iconSrc()} alt="Next.js logo" width={24} height={24} />
             <p>{linkText()}</p>
