@@ -1,5 +1,6 @@
 "use client";
 
+import { PortfolioProject } from "@/types/projectTypes";
 // interface ProjectCardProps {
 // }
 
@@ -7,31 +8,38 @@ import Image from "next/image";
 
 import { useRouter } from "next/navigation";
 
-export function ProjectCard(): JSX.Element {
+export interface ProjectCardProps {
+    project: PortfolioProject;
+}
+
+export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
     const router = useRouter();
+    const projectId = project.id;
 
     return (
         <button
-            className={cardClassName}
+            className="h-[320px] w-[320px] rounded-[32px] bg-primary shadow-neumorph flex flex-col p-32 text-white gap-16"
             // onClick={() => console.log("hi")}
-            onClick={() => router.push("/project")}
+            onClick={() => router.push(`/project/${projectId}`)}
         >
-            <Image
-                //   className="dark:invert"
-                src="/bumpLogo.png"
-                alt="Next.js logo"
-                width={180}
-                height={38}
-                priority
-            />
-            <h3 className="text-lg font-medium">Bump</h3>
-            <h4 className="text-md font-light">
-                A React Native mobile app on iOS and Android for meeting new
-                people
-            </h4>
+            <div className="flex justify-center align-middle h-120 w-full">
+                <Image
+                    //   className="dark:invert"
+                    src={project.coverImage}
+                    alt="Next.js logo"
+                    width={500}
+                    height={120}
+                    priority
+                />
+            </div>
+            <div>
+                <h3 className="text-lg font-medium text-left">
+                    {project.name}
+                </h3>
+                <h4 className="text-md font-light text-left">
+                    {project.subtitle}
+                </h4>
+            </div>
         </button>
     );
 }
-
-const cardClassName =
-    "h-[320px] w-[320px] rounded-[32px] bg-[#F3E9DC] shadow-neumorph flex flex-col p-32";
