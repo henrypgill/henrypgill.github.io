@@ -82,6 +82,12 @@ export default {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                white: "var(--background)",
+                black: "var(--foreground)",
+                primary: "#717744",
+                secondary: "#BCBD8B",
+                tertiary: "#373D20",
+                accent: "#766153",
             },
             boxShadow: {
                 neumorph: "12px 12px 24px #cfc6bb, -12px -12px 24px #fffffd",
