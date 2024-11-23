@@ -117,6 +117,10 @@ export const technologies: TechnologyMap = {
         iconPath: "/gitIcon.svg",
         name: "Git",
     },
+    framer: {
+        iconPath: "/framerIcon.svg",
+        name: "Framer",
+    },
     s3: {
         iconPath: "/awsIcon.svg",
         name: "AWS S3",

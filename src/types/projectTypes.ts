@@ -33,7 +33,8 @@ export type Technology =
     | "monday"
     | "zoho"
     | "prisma"
-    | "git";
+    | "git"
+    | "framer"
 
 export type TechnologyMap = Record<
     Technology,
@@ -54,7 +55,8 @@ export interface PortfolioProject {
     links: ProjectLink[];
     technologies: Technology[];
     images: string[];
+    coverImage: string;
     startDate?: number;
     endDate?: number;
-    coverImage: string;
+    hidden?: boolean;
 }
