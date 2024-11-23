@@ -14,20 +14,20 @@ export default async function Project({
     function ContentColumn(): JSX.Element {
         return (
             <div className="flex flex-col gap-32 w-auto">
-                <div className="bg-white">
-                    {/* <Image
+                {/* <div>
+                    <Image
                         src="/bumpLogo.png"
                         alt="Next.js logo"
                         width={180}
                         height={38}
-                    /> */}
+                    />
                     <div className="bg-black w-full h-320 rounded-3xl flex align-middle justify-center ">
                         <p className="text-4xl text-white h-full">Images</p>
                     </div>
-                </div>
+                </div> */}
 
                 <div>
-                    <div className="flex flex-col gap-32 rounded-2xl p-16 shadow-2xl">
+                    <div className="flex flex-col gap-32 rounded-2xl bg-accent text-white p-16 shadow-2xl">
                         <div className="flex gap-x-24">
                             <Image
                                 src={project.coverImage}
