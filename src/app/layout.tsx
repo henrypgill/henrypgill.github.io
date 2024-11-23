@@ -15,8 +15,8 @@ import { AppFooter } from "./AppFooter";
 // });
 
 export const metadata: Metadata = {
-    title: "Portfolio",
-    description: "Henry Gill's works",
+    title: "Henry Gill",
+    description: "The things I've done",
 };
 
 const roboto = Roboto({
