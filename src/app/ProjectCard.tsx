@@ -16,6 +16,35 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
     const router = useRouter();
     const projectId = project.id;
 
+    function ProjectDate(): JSX.Element {
+        if (project.startDate && project.endDate) {
+            const start = new Date(project.startDate)
+            const end = new Date(project.endDate)
+            const string = `${months[start.getMonth()]} ${start.getFullYear()} - ${months[end.getMonth()]} ${end.getFullYear()}`
+            return (
+                <p>{string}</p>
+            )
+
+        } else if (project.endDate) {
+            const end = new Date(project.endDate)
+            const string = `${months[end.getMonth()]} ${end.getFullYear()}`
+            return (
+                <p>{string}</p>
+            )
+
+        } else if (project.startDate) {
+            const start = new Date(project.startDate)
+            const string = `${months[start.getMonth()]} ${start.getFullYear()}`
+            return (
+                <p>{string}</p>
+            )
+
+        } else {
+            return <></>
+        }
+
+    }
+
     return (
         <button
             className="h-[320px] w-[320px] rounded-[32px] bg-primary shadow-neumorph flex flex-col p-32 text-white gap-16"
@@ -40,6 +69,27 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
                     {project.subtitle}
                 </h4>
             </div>
+            <div>
+            {
+                <ProjectDate />
+            }
+            </div>
         </button>
     );
 }
+
+
+const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+]
