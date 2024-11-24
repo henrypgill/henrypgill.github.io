@@ -35,11 +35,20 @@ export type Technology =
     | "prisma"
     | "git"
     | "framer"
+    | "playConsole"
+    | "appleDeveloper"
+    | "xcode"
+    | "appleAds"
+    | "mySql";
 
-export type TechnologyMap = Record<
-    Technology,
-    { iconPath: string; name: string }
->;
+export interface TechnologyMapItem {
+    iconPath: string;
+    name: string;
+    type: "language" | "technology" | "software";
+    // | "library"
+}
+
+export type TechnologyMap = Record<Technology, TechnologyMapItem>;
 
 export interface ProjectLink {
     type: "web" | "figma" | "github";
