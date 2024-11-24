@@ -18,31 +18,21 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
 
     function ProjectDate(): JSX.Element {
         if (project.startDate && project.endDate) {
-            const start = new Date(project.startDate)
-            const end = new Date(project.endDate)
-            const string = `${months[start.getMonth()]} ${start.getFullYear()} - ${months[end.getMonth()]} ${end.getFullYear()}`
-            return (
-                <p>{string}</p>
-            )
-
+            const start = new Date(project.startDate);
+            const end = new Date(project.endDate);
+            const string = `${months[start.getMonth()]} ${start.getFullYear()} - ${months[end.getMonth()]} ${end.getFullYear()}`;
+            return <p>{string}</p>;
         } else if (project.endDate) {
-            const end = new Date(project.endDate)
-            const string = `${months[end.getMonth()]} ${end.getFullYear()}`
-            return (
-                <p>{string}</p>
-            )
-
+            const end = new Date(project.endDate);
+            const string = `${months[end.getMonth()]} ${end.getFullYear()}`;
+            return <p>{string}</p>;
         } else if (project.startDate) {
-            const start = new Date(project.startDate)
-            const string = `${months[start.getMonth()]} ${start.getFullYear()}`
-            return (
-                <p>{string}</p>
-            )
-
+            const start = new Date(project.startDate);
+            const string = `${months[start.getMonth()]} ${start.getFullYear()}`;
+            return <p>{string}</p>;
         } else {
-            return <></>
+            return <></>;
         }
-
     }
 
     return (
@@ -69,15 +59,10 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
                     {project.subtitle}
                 </h4>
             </div>
-            <div>
-            {
-                <ProjectDate />
-            }
-            </div>
+            <div>{<ProjectDate />}</div>
         </button>
     );
 }
-
 
 const months = [
     "Jan",
@@ -92,4 +77,4 @@ const months = [
     "Oct",
     "Nov",
     "Dec",
-]
+];
