@@ -78,7 +78,7 @@ export default async function Project({
                             Technologies
                         </h3>
                         {project.technologies.map((t) => (
-                            <ProjectTech tech={t} key={t+t.length} />
+                            <ProjectTech tech={t} key={t + t.length} />
                         ))}
                     </div>
                 )}
