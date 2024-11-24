@@ -33,12 +33,22 @@ export type Technology =
     | "monday"
     | "zoho"
     | "prisma"
-    | "git";
+    | "git"
+    | "framer"
+    | "playConsole"
+    | "appleDeveloper"
+    | "xcode"
+    | "appleAds"
+    | "mySql";
 
-export type TechnologyMap = Record<
-    Technology,
-    { iconPath: string; name: string }
->;
+export interface TechnologyMapItem {
+    iconPath: string;
+    name: string;
+    type: "language" | "technology" | "software";
+    // | "library"
+}
+
+export type TechnologyMap = Record<Technology, TechnologyMapItem>;
 
 export interface ProjectLink {
     type: "web" | "figma" | "github";
@@ -54,7 +64,8 @@ export interface PortfolioProject {
     links: ProjectLink[];
     technologies: Technology[];
     images: string[];
+    coverImage: string;
     startDate?: number;
     endDate?: number;
-    coverImage: string;
+    hidden?: boolean;
 }
