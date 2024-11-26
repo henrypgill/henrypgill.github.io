@@ -37,10 +37,14 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
 
     return (
         <button
-            className="h-[320px] w-[320px] rounded-[32px] bg-primary shadow-neumorph flex flex-col p-32 text-white gap-16"
+        className="h-[320px] w-[320px] rounded-[32px] bg-primary shadow-neumorph text-white flex flex-col p-32 justify-between"
+        >
+        <div
+            className="flex flex-col gap-16"
             // onClick={() => console.log("hi")}
             onClick={() => router.push(`/project/${projectId}`)}
         >
+
             <div className="flex justify-center align-middle h-120 w-full">
                 <Image
                     //   className="dark:invert"
@@ -59,6 +63,7 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
                     {project.subtitle}
                 </h4>
             </div>
+        </div>
             <div>{<ProjectDate />}</div>
         </button>
     );

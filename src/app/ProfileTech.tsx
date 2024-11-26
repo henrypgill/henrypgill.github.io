@@ -14,7 +14,7 @@ export function ProfileTech({ tech }: ProfileTechProps): JSX.Element {
     return (
         <div
             // onClick={() => window.open(link, "_blank")}
-            className="flex flex-row gap-12 bg-white rounded-2xl p-12 py-6 justify-center align-middle bg-secondary"
+            className="flex flex-row gap-12 bg-white rounded-2xl p-12 py-6 justify-center align-middle border-2 border-secondary"
         >
             <div className="flex justify-center align-middle w-24 h-24 ">
                 <Image
