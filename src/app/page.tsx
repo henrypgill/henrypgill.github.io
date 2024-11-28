@@ -36,11 +36,10 @@ export default function Home() {
                 <p
                     className={profileParagraphStyle}
                 >{`The main thing I've worked on is Bump, where I founded a startup to tackle the loneliness epidemic, prevalence of mental health problems, and the disconnectedness that we are experiencing in society.`}</p>
-<div
-className="h-24"></div>
+                <div className="h-24"></div>
                 <p
                     className={profileParagraphStyle}
-                >{`I'm currently working a project called CommunityOS, which is in the discovery phase where conversations are being had with intiial customers to hone in on the proble that is being solved. This project will involve a python backend with a Next.js front-end react app, and eventually a react-native mobile app as well.`}</p>
+                >{`I'm currently working a project called CommunityOS, which is in the discovery phase where conversations are being had with initial customers to hone in on the proble that is being solved. This project will involve a python backend with a Next.js front-end react app, and eventually a react-native mobile app as well.`}</p>
             </div>
         );
     }

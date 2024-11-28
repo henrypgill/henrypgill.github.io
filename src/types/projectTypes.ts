@@ -65,7 +65,6 @@ export interface PortfolioProject {
     technologies: Technology[];
     images: string[];
     coverImage: string;
-    startDate?: number;
-    endDate?: number;
+    dateText?: string;
     hidden?: boolean;
 }

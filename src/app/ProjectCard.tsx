@@ -1,70 +1,39 @@
-"use client";
-
 import { PortfolioProject } from "@/types/projectTypes";
-// interface ProjectCardProps {
-// }
-
 import Image from "next/image";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export interface ProjectCardProps {
     project: PortfolioProject;
 }
 
 export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
-    const router = useRouter();
     const projectId = project.id;
 
-    function ProjectDate(): JSX.Element {
-        if (project.startDate && project.endDate) {
-            const start = new Date(project.startDate);
-            const end = new Date(project.endDate);
-            const string = `${months[start.getMonth()]} ${start.getFullYear()} - ${months[end.getMonth()]} ${end.getFullYear()}`;
-            return <p>{string}</p>;
-        } else if (project.endDate) {
-            const end = new Date(project.endDate);
-            const string = `${months[end.getMonth()]} ${end.getFullYear()}`;
-            return <p>{string}</p>;
-        } else if (project.startDate) {
-            const start = new Date(project.startDate);
-            const string = `${months[start.getMonth()]} ${start.getFullYear()}`;
-            return <p>{string}</p>;
-        } else {
-            return <></>;
-        }
-    }
-
     return (
-        <button
-        className="h-[320px] w-[320px] rounded-[32px] bg-primary shadow-neumorph text-white flex flex-col p-32 justify-between"
-        >
-        <div
-            className="flex flex-col gap-16"
-            // onClick={() => console.log("hi")}
-            onClick={() => router.push(`/project/${projectId}`)}
-        >
-
-            <div className="flex justify-center align-middle h-120 w-full">
-                <Image
-                    //   className="dark:invert"
-                    src={project.coverImage}
-                    alt="Next.js logo"
-                    width={500}
-                    height={120}
-                    priority
-                />
-            </div>
-            <div>
-                <h3 className="text-lg font-medium text-left">
-                    {project.name}
-                </h3>
-                <h4 className="text-md font-light text-left">
-                    {project.subtitle}
-                </h4>
-            </div>
-        </div>
-            <div>{<ProjectDate />}</div>
+        <button className="h-[320px] w-[320px] rounded-[32px] bg-primary shadow-neumorph text-white flex flex-col p-32 justify-between">
+            <Link
+                className="flex flex-col gap-16"
+                href={`/project/${projectId}`}
+            >
+                <div className="flex justify-center align-middle h-120 w-full">
+                    <Image
+                        src={project.coverImage}
+                        alt="Next.js logo"
+                        width={500}
+                        height={120}
+                        priority
+                    />
+                </div>
+                <div>
+                    <h3 className="text-lg font-medium text-left">
+                        {project.name}
+                    </h3>
+                    <h4 className="text-md font-light text-left">
+                        {project.subtitle}
+                    </h4>
+                </div>
+            </Link>
+            {project.dateText && <div>{project.dateText}</div>}
         </button>
     );
 }

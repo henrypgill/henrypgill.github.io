@@ -36,8 +36,11 @@ export default async function Project({
                                 height={38}
                             />
                             <div>
-                                <h2 className="text-2xl font-bold">{project.name}</h2>
-                                <p className="text-lg font-regular">{project.subtitle}
+                                <h2 className="text-2xl font-bold">
+                                    {project.name}
+                                </h2>
+                                <p className="text-lg font-regular">
+                                    {project.subtitle}
                                 </p>
                             </div>
                         </div>

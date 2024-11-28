@@ -1,5 +1,3 @@
-"use client";
-
 import { Technology } from "@/types/projectTypes";
 import { technologies } from "@/utils/technologies";
 import Image from "next/image";

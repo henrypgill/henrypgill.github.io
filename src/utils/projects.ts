@@ -21,7 +21,6 @@ export const projects: PortfolioProject[] = [
             "Wrote a marketing and customer acquisition strategy that leveraged traditional and guerrilla marketing. Prioritising organic growth through virality and network effect whilst minimising costs to meet strict budget constraints.",
             "Produced financial estimates for the first two years of operations including expansion to overseas markets. Also maintained business accounts and financial records.",
             "Wound down to a side-project at the end of October 2024 due to a lack of financial runway.",
-
         ],
         coverImage: "/bumpCover.svg",
         links: [
@@ -76,19 +75,18 @@ export const projects: PortfolioProject[] = [
             "appleAds",
         ],
         images: [],
-        startDate: new Date(2023, 9, 1).getTime(),
-        endDate: new Date(2024, 9, 1).getTime(),
+        dateText: "Oct 2023 - Oct 2024",
     },
     {
         id: "embarc",
         name: "Embarc",
         subtitle: "A London future founders community",
         description: [
-                "Brought on to take over from the technical founder when they left. Had complete ownership and responsibility over the technical side of the business, user data, and product.",
-                "Built a new customer facing community platform with React and Next.JS.",
-                "Developed new internal tooling, integrations with 3rd party APIs and services, back-end services, and databases. This was built utilising a combination of Retool (low-code), Node.js, and MongoDB and PostgreSQL. ",
-                "Organised networking events with VCs and tech companies (Dawn Capital, Google, Snowflake, and more), driving an over 100% increase in our userbase in 6 months.",
-                "Worked alongside other team members on projects that included community engagement, copywriting, partnerships, and business development.",
+            "Brought on to take over from the technical founder when they left. Had complete ownership and responsibility over the technical side of the business, user data, and product.",
+            "Built a new customer facing community platform with React and Next.JS.",
+            "Developed new internal tooling, integrations with 3rd party APIs and services, back-end services, and databases. This was built utilising a combination of Retool (low-code), Node.js, and MongoDB and PostgreSQL. ",
+            "Organised networking events with VCs and tech companies (Dawn Capital, Google, Snowflake, and more), driving an over 100% increase in our userbase in 6 months.",
+            "Worked alongside other team members on projects that included community engagement, copywriting, partnerships, and business development.",
         ],
         coverImage: "/embarcCover.svg",
         links: [
@@ -126,8 +124,7 @@ export const projects: PortfolioProject[] = [
             "git",
         ],
         images: [],
-        startDate: new Date(2024, 0, 1).getTime(),
-        endDate: new Date(2024, 9, 1).getTime(),
+        dateText: "Jan 2024 - Oct 2024",
     },
     {
         id: "frontend-coding-challenge",
@@ -144,7 +141,7 @@ export const projects: PortfolioProject[] = [
             "Instead of building in these features, we have identified two higher level features to build which would solve their problem, and would be useful to all of our customers:",
             "1. `Calculation columns`, these are columns in the table that are populated based on a user defined formula e.g. A cell count column that is created by the formula: `Cell Density * Volume` ",
             "2.  A `Column Aggregations` feature which allows a user to perform operations on a selected data column, such as showing the `Maximum Density`, `Minimum Cell Count`, etc...",
-            "You have a meeting scheduled with the scientist who is a customer. Build something they will be use on your laptop to give you feedback. Please use <a href=\"https://blueprintjs.com/\">Blueprintjs</a>.",
+            'You have a meeting scheduled with the scientist who is a customer. Build something they will be use on your laptop to give you feedback. Please use <a href="https://blueprintjs.com/">Blueprintjs</a>.',
             "Put any notes and your instructions in the README as well as what you would do next to improve this. Please also answer how you would make it possible to do `Rate of change calculations` e.g. `Rate of Cell Count Growth`",
         ],
         coverImage: "/reactIcon.svg",
@@ -165,16 +162,9 @@ export const projects: PortfolioProject[] = [
                 // text: ""
             },
         ],
-        technologies: [
-            "react",
-            "redux",
-            "github",
-            "typescript",
-            "git",
-        ],
+        technologies: ["react", "redux", "github", "typescript", "git"],
         images: [],
-        // startDate: new Date(2024, 0, 1).getTime(),
-        endDate: new Date(2024, 0, 1).getTime(),
+        dateText: "Jan 2024",
     },
     {
         id: "backend-coding-challenge",
@@ -217,8 +207,7 @@ export const projects: PortfolioProject[] = [
             "git",
         ],
         images: [],
-        // startDate: new Date(2024, 0, 1).getTime(),
-        endDate: new Date(2024, 0, 1).getTime(),
+        dateText: "Jan 2024",
     },
     {
         id: "community-os",
@@ -268,8 +257,7 @@ export const projects: PortfolioProject[] = [
             "git",
         ],
         images: [],
-        // startDate: new Date(2024, 0, 1).getTime(),
-        // endDate: new Date(2024, 9, 1).getTime(),
+        dateText: "December 2024 - Present",
         hidden: true,
     },
     {
@@ -281,7 +269,6 @@ export const projects: PortfolioProject[] = [
             "Set up web analytics and hosting of the websites, as well as migrated them from their existing services.",
             "Created responsive pages that adhered to accessibility guidelines (WCAG 2) using semantic HTML and CSS.",
             "Worked closely with an SEO consultant to have the website rank within the first two pages consistently on Google for a wide range of relevant search terms.",
-                        
         ],
         coverImage: "/saventSolarWebsiteCover.png",
         links: [
@@ -294,8 +281,7 @@ export const projects: PortfolioProject[] = [
         ],
         technologies: ["figma", "webflow"],
         images: [],
-        // startDate: new Date(2024, 0, 1).getTime(),
-        endDate: new Date(2023, 0, 1).getTime(),
+        dateText: "Jan 2023",
     },
     {
         id: "gpt-project-builder",
@@ -306,7 +292,7 @@ export const projects: PortfolioProject[] = [
             "converts it into sets of seperate instructions to generate components from prompts that are known to work for different types of components",
             "e.g. the description says a page with an image and two buttons will generate an instruction to create an image element, and two instructions to create button elements",
             "each set of instructions tells chat GPT to write the code for each of those elements",
-            "the response is then formatted and returned to the user"
+            "the response is then formatted and returned to the user",
         ],
         coverImage: "/saventSolarWebsiteCover.png",
         links: [],
@@ -320,17 +306,28 @@ export const projects: PortfolioProject[] = [
             "zoho",
         ],
         images: [],
-        startDate: new Date(2024, 0, 1).getTime(),
-        endDate: new Date(2024, 10, 1).getTime(),
-        hidden: true
+        dateText: "Nov 2024 - Present",
+        hidden: true,
     },
     {
         id: "tech-consulting",
         name: "Savent Solar",
         subtitle: "Tech consulting for a solar panel company",
-        description: loremIpsum,
+        description: [
+            "Advised on technology decisions for everything from accountancy and CRM software, to purchase choices of technology on grant applications.",
+            "Troubleshooting and support for everything IT related.",
+            "Undertook work for a solar installation company analysing their business for opportunities where technology could improve their operations and determining KPIs that can be tracked moving forwards.",
+            "Worked closely with their Head of Operations to assess their current and future needs, and ensure the solutions chosen would enable them to double their number of installs in 2024.",
+            "Analysed potential solutions and produced an initial proposal containing various options that would optimise their sales pipeline, CRM, and project management systems. ",
+        ],
         coverImage: "/saventSolarWebsiteCover.png",
-        links: [],
+        links: [
+            {
+                type: "github",
+                link: "https://github.com/henrypgill/Jentis-Challenge",
+                // text: ""
+            },
+        ],
         technologies: [
             "figma",
             "webflow",
@@ -341,8 +338,35 @@ export const projects: PortfolioProject[] = [
             "zoho",
         ],
         images: [],
-        startDate: new Date(2024, 0, 1).getTime(),
-        endDate: new Date(2024, 10, 1).getTime(),
-        hidden: true
+        dateText: "Oct 2022 - Present",
+        // hidden: true
+    },
+    {
+        id: "Solar CRM",
+        name: "Savent Solar",
+        subtitle: "Tech consulting for a solar panel company",
+        description: [
+            "Built the MVP for a custom CRM and project management software tailor built for the clients needs.",
+        ],
+        coverImage: "/saventSolarWebsiteCover.png",
+        links: [
+            {
+                type: "github",
+                link: "https://github.com/henrypgill/Jentis-Challenge",
+                // text: ""
+            },
+        ],
+        technologies: [
+            "figma",
+            "webflow",
+            "zapier",
+            "xero",
+            "pipedrive",
+            "monday",
+            "zoho",
+        ],
+        images: [],
+        dateText: "Oct 2023",
+        hidden: true,
     },
 ];
