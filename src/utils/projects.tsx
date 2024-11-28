@@ -2,20 +2,20 @@ import { PortfolioProject } from "@/types/projectTypes";
 import { loremIpsum } from "./general";
 
 
-function DescH2({text}: {text: string}): JSX.Element {
+function DescHeading({text}: {text: string}): JSX.Element {
     return (
         <h2
-            className=""
+            className="font-semibold text-xl"
         >
             {text}
         </h2>
     )
 }
 
-function DescH3({text}: {text: string}): JSX.Element {
+function DescSubHeading({text}: {text: string}): JSX.Element {
     return (
         <h3
-            className=""
+            className="font-medium text-lg"
         >
             {text}
         </h3>
@@ -25,10 +25,19 @@ function DescH3({text}: {text: string}): JSX.Element {
 function DescText({text}: {text: string}): JSX.Element {
     return (
         <p
-            className=""
+            className="font-regular"
         >
             {text}
         </p>
+    )
+}
+
+function DescList({text}: {text: string[]}): JSX.Element {
+    return (
+        <ol
+        >
+            {text.map(t => <li>{t}</li>)}
+        </ol>
     )
 }
 
@@ -40,6 +49,12 @@ export const projects: PortfolioProject[] = [
             "A React Native mobile app on iOS and Android for meeting new people",
             description: () => (
                 <>
+                    <DescHeading text="About"/>
+                    <DescText text="Bump is a social platform that exists to tackle the ongoing loneliness epidemic"/>
+                    <DescSubHeading text="The product and tech"/>
+                    <DescText text="The front-end of the app consists of a mobile app where users are able to "/>
+                    <DescText text=""/>
+                    <DescHeading text="About"/>
                     <DescText text="The GitHub repo for this is not publicly available due to it containing confidential IP and sensitive information. I am happy to talk about it in detail upon request if you would like to find out more."/>
                     <DescText text="Pitched for and was awarded Newcastle University's start-up grant funding of over £2000."/>
                     <DescText text="Prepared and delivered pitch decks to potential investors."/>
