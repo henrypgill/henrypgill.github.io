@@ -10,7 +10,7 @@ export default async function Project({
 }) {
     const { id } = await params;
     const project = projects.find((p) => p.id === id)!;
-
+    // const Description = await project.description()
     function ContentColumn(): JSX.Element {
         return (
             <div className="flex flex-col gap-32 w-auto">
@@ -45,13 +45,9 @@ export default async function Project({
                             </div>
                         </div>
                         <div>
-                            <h3 className="font-medium text-lg">Description</h3>
+                            <h3 className="font-medium text-lg">About</h3>
                             <div className="flex flex-col gap-16">
-                                {project.description.map((desc) => (
-                                    <p key={desc} className="font-light">
-                                        {desc}
-                                    </p>
-                                ))}
+                                <project.description />
                             </div>
                         </div>
                     </div>

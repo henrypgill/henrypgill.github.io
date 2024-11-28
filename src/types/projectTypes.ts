@@ -60,7 +60,7 @@ export interface PortfolioProject {
     id: string;
     name: string;
     subtitle: string;
-    description: string[];
+    description: () => JSX.Element//string[];
     links: ProjectLink[];
     technologies: Technology[];
     images: string[];
