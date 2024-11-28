@@ -10,10 +10,12 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
     const projectId = project.id;
 
     return (
-        <button className="h-[320px] w-[320px] rounded-[32px] bg-primary shadow-neumorph text-white flex flex-col p-32 justify-between">
-            <Link
+        <Link
+        href={`/project/${projectId}`}
+            className="h-[320px] w-[320px] rounded-[32px] bg-primary shadow-neumorph text-white flex flex-col p-32 justify-between">
+        
+            <div
                 className="flex flex-col gap-16"
-                href={`/project/${projectId}`}
             >
                 <div className="flex justify-center align-middle h-120 w-full">
                     <Image
@@ -32,9 +34,9 @@ export function ProjectCard({ project }: ProjectCardProps): JSX.Element {
                         {project.subtitle}
                     </h4>
                 </div>
-            </Link>
+            </div>
             {project.dateText && <div>{project.dateText}</div>}
-        </button>
+        </Link>
     );
 }
 
