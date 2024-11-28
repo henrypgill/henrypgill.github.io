@@ -34,10 +34,13 @@ function DescText({text}: {text: string}): JSX.Element {
 
 function DescList({text}: {text: string[]}): JSX.Element {
     return (
-        <ol
-        >
-            {text.map(t => <li>{t}</li>)}
-        </ol>
+
+        <ul
+            className="list-disc list-inside"
+            role="list"
+            >
+            {text.map(t => <li key={t}>{t}</li>)}
+        </ul>
     )
 }
 
@@ -50,24 +53,41 @@ export const projects: PortfolioProject[] = [
             description: () => (
                 <>
                     <DescHeading text="About"/>
-                    <DescText text="Bump is a social platform that exists to tackle the ongoing loneliness epidemic"/>
-                    <DescSubHeading text="The product and tech"/>
-                    <DescText text="The front-end of the app consists of a mobile app where users are able to "/>
-                    <DescText text=""/>
-                    <DescHeading text="About"/>
-                    <DescText text="The GitHub repo for this is not publicly available due to it containing confidential IP and sensitive information. I am happy to talk about it in detail upon request if you would like to find out more."/>
-                    <DescText text="Pitched for and was awarded Newcastle University's start-up grant funding of over £2000."/>
-                    <DescText text="Prepared and delivered pitch decks to potential investors."/>
-                    <DescText text="Built and published a mobile app on iOS and Android, implementing a range of features such as: notifications, payments, instant messaging, camera, and authentication."/>
-                    <DescText text="Acquired 200 users in 2 weeks through guerrilla marketing, social media, and word of mouth."/>
-                    <DescText text="Designed, built, and deployed multi-layered, versioned, and authenticated REST APIs both for the mobile app and internal tools."/>
-                    <DescText text="Provisioned AWS services for deployment; ECS/EC2 for Docker containers utilising load balancing, S3 buckets for storing and serving files, IAM for role and access management, and others."/>
-                    <DescText text="Implemented Firebase for authentication, user management, analytics, and cloud messaging."/>
+                    <DescText text="Bump is a social platform that exists to tackle the loneliness epidemic, prevalence of mental health problems, and societal disonnect that is prevalent today. By hosting events and providing spaces where you are able to meet new people, Bump helps you form new friendships and grow your real life social circle. Bump's mobile app is where users are able to find and sign up for events, add and message friends, edit their profile, and more."/>
+                    <DescText text="The idea for Bump was conceived in February 2023. I then began initial exploration of the problem and worked on potential solutions on the side until March 2024. It was at this time that I then began work on Bump full-time, working on both the commercial and technical sides of the business. In May 2024 I applied, pitched for, and was awarded over £2000 in grant funding as part of the Newcastle University Startup Fund. During the process of applying for grant funding, I explored the possibility of raising a pre-seed round from VC/angels, but realised it was too early at this stage to fundraise and decided to proceed with grant funding alone. Due to budget limitations imposed by not fundraising, no work was outsourced and everything was done by me. This involved anything from from brand design design to coding to business planning to UI/UX design."/>
+                    <DescText text="Bump came out of stealth and launched publicly at the start of September 2024. Initial customer acquisition consisted of Guerrilla marketing and social media posts, resulting in nearly 200 users in the first 2 week period. Guerrilla marketing involved standing outside tube stations that received a high footfall of target customers, and social media marketing was a mix of short form video and image posts. Two events were held, one in September and October each, both were very successful and exceeded expected turnout by 50%. The nature of the marketing to achieve the required goals for the first two events demonstrated that a fundraise would be required to proceed and achieve the necessary customer acquisition rates going forward. It was at this point at the start of November 2024 that I made the decision to wind down the company and not pursue raising a pre-seed round for personal reasons." />
+
+                    <DescHeading text="Tech"/>
+                    <DescText text="Various tech was used throughout the business and product. Due to a very limited budget, cost was a large consideration in all choices, and thus third party services for software such as CRMs were avoided, instead opting to build internal tools. The third party services that were used were for things such as accounting (Xero), email (G-Suite), and legal (Termly) where bespoke solutions would have been too time intensive or created liability risks. TypeScript is used across the stack, with some experimental data services being written in Python." />
+                    <DescSubHeading text="Front-End"/>
+                    <DescText text="The front-end consists of a a React Native mobile app on iOS and Android, the website for marketing purposes, and internal tooling for managing events and monitoring the state of the platform. Various technologies are utilised across the front-end:"/>
+                    <DescList text={[
+                        "- Google Firebase is used to handle cloud messaging, analytics, and auth",
+                        "- Stripe for payments",
+                        "- Twilio for mobile verification",
+                        // "- React Redux toolkit for state management",
+                    ]} />
+                    <DescText text="The website was built on Framer, and internal tooling was made using Retool and connects to the back-end and database."/>
+
+                    <DescSubHeading text="Back-End"/>
+                    <DescText text="The back-end consists of two parts: the API and database. The API is a multi-layered, versioned, and authenticated REST API running Bun (Node.js alternative) in a docker container, hosted on AWS ECS utilising EC2 compute with AWS Fargate, elastic load balancers, and virtual private network with certificate management for https. The database is MongoDB, hosted and managed on Atlas on AWS. The technologies used in the backend are:"/>
+                    <DescList text={[
+                        "- Bun as the JavaScript runtime",
+                        "- NestJS (with express) as the API framework",
+                        "- Docker",
+                        "- AWS S3 for image storage",
+                        "- Firebase for auth",
+                        "- MongoDB for database connections",
+                        "- Socket.io for websockets",
+                    ]} />
+                    <DescText text="Google cloud and gemini used for experimentation with AI applications and user profile analysis." />
+
+                    <DescHeading text="More Info"/>
+                    <DescText text="The GitHub repo for this is not publicly available due to it containing confidential IP and sensitive information. I am happy to talk about it in detail upon request if you would like to know more."/>
                     <DescText text="Carried out product discovery and development, through customer interviews, research, and analysis of the market and competitors. Alongside product testing with a variety of potential customers and demographics."/>
                     <DescText text="Created UI/UX designs and prototypes in Figma, and marketing materials/brand assets in Illustrator and photoshop."/>
-                    <DescText text="Wrote a marketing and customer acquisition strategy that leveraged traditional and guerrilla marketing. Prioritising organic growth through virality and network effect whilst minimising costs to meet strict budget constraints."/>
-                    <DescText text="Produced financial estimates for the first two years of operations including expansion to overseas markets. Also maintained business accounts and financial records."/>
-                    <DescText text="Wound down to a side-project at the end of October 2024 due to a lack of financial runway."/>
+                    <DescText text="Wrote and carried out a marketing and customer acquisition strategy that leveraged traditional and guerrilla marketing. Prioritising organic growth through virality and network effect whilst minimising costs to meet strict budget constraints."/>
+                    <DescText text="Produced financial estimates for the first three years of operations including expansion to overseas markets. Also maintained business accounts and financial records."/>
                 </>
             ),
         coverImage: "/bumpCover.svg",
