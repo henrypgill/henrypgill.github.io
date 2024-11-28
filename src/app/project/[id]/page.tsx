@@ -44,12 +44,9 @@ export default async function Project({
                                 </p>
                             </div>
                         </div>
-                        <div>
-                            <h3 className="font-medium text-lg">About</h3>
-                            <div className="flex flex-col gap-16">
+                            <div className="flex flex-col gap-8">
                                 <project.description />
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
